@@ -1,0 +1,6 @@
+homepage: "https://trackinghippo.io"
+documentation: "https://github.com/trackinghippo-io/sgtm-facebook-tag/blob/main/README.md"
+# Add one entry per released commit, newest first, once the commit exists:
+# versions:
+#   - sha: <commit sha>
+#     changeNotes: Initial release of the Facebook Conversions API tag template.

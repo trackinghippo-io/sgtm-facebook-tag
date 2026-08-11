@@ -1,6 +1,11 @@
 homepage: "https://trackinghippo.io"
 documentation: "https://github.com/trackinghippo-io/sgtm-facebook-tag/blob/main/README.md"
-# Add one entry per released commit, newest first, once the commit exists:
-# versions:
-#   - sha: <commit sha>
-#     changeNotes: Initial release of the Facebook Conversions API tag template.
+versions:
+  - sha: 59a116a1a595cb693f9e9ee2df157ddaa4e060a4
+    changeNotes: >-
+      Initial release of the Facebook Conversions API tag template for server
+      containers. Maps GA4 and Data Client event data onto Meta's server event,
+      user_data, custom_data and app_data objects, normalises and hashes personal
+      data with SHA-256, resolves and restores _fbp and _fbc, and supports multiple
+      datasets, event_id deduplication, event enhancement, consent gating and
+      enrichment from TrackingHippo.io container module headers.

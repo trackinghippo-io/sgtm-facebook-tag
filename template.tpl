@@ -39,7 +39,7 @@ ___TEMPLATE_PARAMETERS___
         "name": "pixelId",
         "displayName": "Dataset (Pixel) ID",
         "simpleValueType": true,
-        "help": "The Meta dataset ID, also called Pixel ID. Found in Events Manager under <strong>Data sources</strong>.",
+        "help": "The Meta dataset ID, also called Pixel ID. Found in Events Manager under \u003cstrong\u003eData sources\u003c/strong\u003e.",
         "valueValidators": [
           {
             "type": "NON_EMPTY"
@@ -58,7 +58,7 @@ ___TEMPLATE_PARAMETERS___
         "name": "accessToken",
         "displayName": "Conversions API Access Token",
         "simpleValueType": true,
-        "help": "Generated in Events Manager under <strong>Settings > Conversions API > Generate access token</strong>. Store it in an environment variable or a lookup table variable rather than pasting it into every tag.",
+        "help": "Generated in Events Manager under \u003cstrong\u003eSettings \u003e Conversions API \u003e Generate access token\u003c/strong\u003e. Store it in an environment variable or a lookup table variable rather than pasting it into every tag.",
         "valueValidators": [
           {
             "type": "NON_EMPTY"
@@ -123,7 +123,7 @@ ___TEMPLATE_PARAMETERS___
         "name": "testEventCode",
         "displayName": "Test event code",
         "simpleValueType": true,
-        "help": "Only for the <strong>Test events</strong> tab in Events Manager. Remove it before going live — events sent with a test code are not used for optimisation or attribution."
+        "help": "Only for the \u003cstrong\u003eTest events\u003c/strong\u003e tab in Events Manager. Remove it before going live — events sent with a test code are not used for optimisation or attribution."
       }
     ]
   },
@@ -153,7 +153,7 @@ ___TEMPLATE_PARAMETERS___
         ],
         "simpleValueType": true,
         "defaultValue": "inherit",
-        "help": "<strong>Inherit</strong> maps common GA4 event names to their Meta equivalent (for example <code>purchase</code> → <code>Purchase</code>). Names without a mapping are forwarded unchanged as a custom event."
+        "help": "\u003cstrong\u003eInherit\u003c/strong\u003e maps common GA4 event names to their Meta equivalent (for example \u003ccode\u003epurchase\u003c/code\u003e → \u003ccode\u003ePurchase\u003c/code\u003e). Names without a mapping are forwarded unchanged as a custom event."
       },
       {
         "type": "SELECT",
@@ -247,7 +247,7 @@ ___TEMPLATE_PARAMETERS___
             "type": "EQUALS"
           }
         ],
-        "help": "<strong>AppendValue</strong> adds value to an event that was already sent. It requires the <strong>Original event data</strong> section below."
+        "help": "\u003cstrong\u003eAppendValue\u003c/strong\u003e adds value to an event that was already sent. It requires the \u003cstrong\u003eOriginal event data\u003c/strong\u003e section below."
       },
       {
         "type": "TEXT",
@@ -372,7 +372,7 @@ ___TEMPLATE_PARAMETERS___
         "checkboxText": "Automatically map server event data",
         "simpleValueType": true,
         "defaultValue": true,
-        "help": "Fills <code>event_time</code>, <code>event_id</code>, <code>event_source_url</code>, <code>referrer_url</code>, <code>opt_out</code> and the data processing options from the incoming event, plus any <code>x-fb-sed-*</code> event data key."
+        "help": "Fills \u003ccode\u003eevent_time\u003c/code\u003e, \u003ccode\u003eevent_id\u003c/code\u003e, \u003ccode\u003eevent_source_url\u003c/code\u003e, \u003ccode\u003ereferrer_url\u003c/code\u003e, \u003ccode\u003eopt_out\u003c/code\u003e and the data processing options from the incoming event, plus any \u003ccode\u003ex-fb-sed-*\u003c/code\u003e event data key."
       },
       {
         "type": "SIMPLE_TABLE",
@@ -435,7 +435,7 @@ ___TEMPLATE_PARAMETERS___
             "type": "TEXT"
           }
         ],
-        "help": "Values entered here win over the automatic mapping. <code>data_processing_options</code> accepts a comma separated list, for example <code>LDU</code>.",
+        "help": "Values entered here win over the automatic mapping. \u003ccode\u003edata_processing_options\u003c/code\u003e accepts a comma separated list, for example \u003ccode\u003eLDU\u003c/code\u003e.",
         "newRowButtonText": "Add property"
       }
     ]
@@ -452,7 +452,7 @@ ___TEMPLATE_PARAMETERS___
         "checkboxText": "Automatically map user data",
         "simpleValueType": true,
         "defaultValue": true,
-        "help": "Reads the <code>user_data</code> object of the incoming event (the GA4 user-provided data format), the client IP and user agent, the <code>_fbp</code> and <code>_fbc</code> cookies, and any <code>x-fb-ud-*</code> event data key."
+        "help": "Reads the \u003ccode\u003euser_data\u003c/code\u003e object of the incoming event (the GA4 user-provided data format), the client IP and user agent, the \u003ccode\u003e_fbp\u003c/code\u003e and \u003ccode\u003e_fbc\u003c/code\u003e cookies, and any \u003ccode\u003ex-fb-ud-*\u003c/code\u003e event data key."
       },
       {
         "type": "CHECKBOX",
@@ -468,7 +468,7 @@ ___TEMPLATE_PARAMETERS___
         "checkboxText": "Remember user data for later events",
         "simpleValueType": true,
         "defaultValue": false,
-        "help": "Stores the identifying fields of this event in an <code>HttpOnly</code> first-party cookie and fills them back in on later events that arrive without them — so a Purchase still carries the email a visitor typed three pages earlier. Only values that are already a SHA-256 hash are stored, so the cookie can never hold readable personal data, and it is never readable from JavaScript. Values on the current event always win over remembered ones."
+        "help": "Stores the identifying fields of this event in an \u003ccode\u003eHttpOnly\u003c/code\u003e first-party cookie and fills them back in on later events that arrive without them — so a Purchase still carries the email a visitor typed three pages earlier. Only values that are already a SHA-256 hash are stored, so the cookie can never hold readable personal data, and it is never readable from JavaScript. Values on the current event always win over remembered ones."
       },
       {
         "type": "TEXT",
@@ -490,7 +490,7 @@ ___TEMPLATE_PARAMETERS___
         "name": "useClientIdAsExternalId",
         "checkboxText": "Fall back to client_id for external_id",
         "simpleValueType": true,
-        "help": "Used only when no <code>external_id</code> and no <code>user_id</code> are available. Improves match quality for anonymous visitors, but the identifier is per browser rather than per person."
+        "help": "Used only when no \u003ccode\u003eexternal_id\u003c/code\u003e and no \u003ccode\u003euser_id\u003c/code\u003e are available. Improves match quality for anonymous visitors, but the identifier is per browser rather than per person."
       },
       {
         "type": "SELECT",
@@ -638,7 +638,7 @@ ___TEMPLATE_PARAMETERS___
         "checkboxText": "Automatically map custom data",
         "simpleValueType": true,
         "defaultValue": true,
-        "help": "Maps <code>value</code>, <code>currency</code>, <code>transaction_id</code>, <code>search_term</code> and the GA4 <code>items</code> array to <code>contents</code>, <code>content_ids</code> and <code>num_items</code>, plus any <code>x-fb-cd-*</code> event data key."
+        "help": "Maps \u003ccode\u003evalue\u003c/code\u003e, \u003ccode\u003ecurrency\u003c/code\u003e, \u003ccode\u003etransaction_id\u003c/code\u003e, \u003ccode\u003esearch_term\u003c/code\u003e and the GA4 \u003ccode\u003eitems\u003c/code\u003e array to \u003ccode\u003econtents\u003c/code\u003e, \u003ccode\u003econtent_ids\u003c/code\u003e and \u003ccode\u003enum_items\u003c/code\u003e, plus any \u003ccode\u003ex-fb-cd-*\u003c/code\u003e event data key."
       },
       {
         "type": "TEXT",
@@ -646,7 +646,7 @@ ___TEMPLATE_PARAMETERS___
         "displayName": "Item ID key",
         "simpleValueType": true,
         "defaultValue": "item_id",
-        "help": "Which property of an item holds the ID that matches your Meta catalogue. Change it to for example <code>item_variant_id</code> when your catalogue is keyed on variants.",
+        "help": "Which property of an item holds the ID that matches your Meta catalogue. Change it to for example \u003ccode\u003eitem_variant_id\u003c/code\u003e when your catalogue is keyed on variants.",
         "enablingConditions": [
           {
             "paramName": "autoMapCustomData",
@@ -734,7 +734,7 @@ ___TEMPLATE_PARAMETERS___
             "type": "TEXT"
           }
         ],
-        "help": "Any property Meta accepts inside <code>custom_data</code>. Values entered here win over the object variable and the automatic mapping.",
+        "help": "Any property Meta accepts inside \u003ccode\u003ecustom_data\u003c/code\u003e. Values entered here win over the object variable and the automatic mapping.",
         "newRowButtonText": "Add custom data property"
       }
     ]
@@ -750,7 +750,7 @@ ___TEMPLATE_PARAMETERS___
         "name": "autoMapAppData",
         "checkboxText": "Automatically map app data",
         "simpleValueType": true,
-        "help": "Reads an <code>app_data</code> object from the incoming event and any <code>x-fb-ad-*</code> event data key. Only relevant when the action source is <strong>App</strong>."
+        "help": "Reads an \u003ccode\u003eapp_data\u003c/code\u003e object from the incoming event and any \u003ccode\u003ex-fb-ad-*\u003c/code\u003e event data key. Only relevant when the action source is \u003cstrong\u003eApp\u003c/strong\u003e."
       },
       {
         "type": "SELECT",
@@ -900,7 +900,7 @@ ___TEMPLATE_PARAMETERS___
             "type": "EQUALS"
           }
         ],
-        "help": "Reads the <code>X-User-Id</code> header set by the <strong>User ID</strong> module. That identifier is pseudonymous and derived from the visitor's connection, so it identifies a browsing context rather than a person — send your own <code>user_id</code> as well whenever you have one."
+        "help": "Reads the \u003ccode\u003eX-User-Id\u003c/code\u003e header set by the \u003cstrong\u003eUser ID\u003c/strong\u003e module. That identifier is pseudonymous and derived from the visitor\u0027s connection, so it identifies a browsing context rather than a person — send your own \u003ccode\u003euser_id\u003c/code\u003e as well whenever you have one."
       },
       {
         "type": "CHECKBOX",
@@ -915,7 +915,7 @@ ___TEMPLATE_PARAMETERS___
             "type": "EQUALS"
           }
         ],
-        "help": "Reads <code>X-Geo-City</code>, <code>X-Geo-Region</code>, <code>X-Geo-Postal-Code</code> and <code>X-Geo-Country</code>. The values are normalised and hashed like any other address field. The GEO Headers module is not generally available yet, so these headers are empty until it launches."
+        "help": "Reads \u003ccode\u003eX-Geo-City\u003c/code\u003e, \u003ccode\u003eX-Geo-Region\u003c/code\u003e, \u003ccode\u003eX-Geo-Postal-Code\u003c/code\u003e and \u003ccode\u003eX-Geo-Country\u003c/code\u003e. The values are normalised and hashed like any other address field. The GEO Headers module is not generally available yet, so these headers are empty until it launches."
       },
       {
         "type": "CHECKBOX",
@@ -953,7 +953,7 @@ ___TEMPLATE_PARAMETERS___
         "checkboxText": "Generate _fbc from the fbclid parameter",
         "simpleValueType": true,
         "defaultValue": true,
-        "help": "Builds the click ID from <code>fbclid</code> in the page URL when the <code>_fbc</code> cookie has not been set yet, and stores it as a first-party cookie."
+        "help": "Builds the click ID from \u003ccode\u003efbclid\u003c/code\u003e in the page URL when the \u003ccode\u003e_fbc\u003c/code\u003e cookie has not been set yet, and stores it as a first-party cookie."
       },
       {
         "type": "CHECKBOX",
@@ -968,7 +968,7 @@ ___TEMPLATE_PARAMETERS___
         "displayName": "Cookie lifetime in days",
         "simpleValueType": true,
         "defaultValue": "90",
-        "help": "Meta's own pixel uses 90 days."
+        "help": "Meta\u0027s own pixel uses 90 days."
       },
       {
         "type": "CHECKBOX",
@@ -976,7 +976,7 @@ ___TEMPLATE_PARAMETERS___
         "checkboxText": "Override the cookie domain",
         "simpleValueType": true,
         "defaultValue": false,
-        "help": "By default the cookie is written on the registrable domain of the page (<code>auto</code>)."
+        "help": "By default the cookie is written on the registrable domain of the page (\u003ccode\u003eauto\u003c/code\u003e)."
       },
       {
         "type": "TEXT",
@@ -1016,7 +1016,7 @@ ___TEMPLATE_PARAMETERS___
         ],
         "simpleValueType": true,
         "defaultValue": "notSet",
-        "help": "<strong>Always send</strong> is right when consent is already enforced by the trigger or by the client. <strong>Only send when granted</strong> reads <code>consent_state.ad_storage</code> from the incoming event, falling back to the Google Consent Mode <code>x-ga-gcs</code> signal; when neither is present the event is sent."
+        "help": "\u003cstrong\u003eAlways send\u003c/strong\u003e is right when consent is already enforced by the trigger or by the client. \u003cstrong\u003eOnly send when granted\u003c/strong\u003e reads \u003ccode\u003econsent_state.ad_storage\u003c/code\u003e from the incoming event, falling back to the Google Consent Mode \u003ccode\u003ex-ga-gcs\u003c/code\u003e signal; when neither is present the event is sent."
       }
     ]
   },
@@ -1040,7 +1040,7 @@ ___TEMPLATE_PARAMETERS___
         "checkboxText": "Send an app secret proof",
         "simpleValueType": true,
         "defaultValue": false,
-        "help": "Required when the app behind your access token has <strong>Require app secret</strong> enabled."
+        "help": "Required when the app behind your access token has \u003cstrong\u003eRequire app secret\u003c/strong\u003e enabled."
       },
       {
         "type": "TEXT",
@@ -1064,7 +1064,7 @@ ___TEMPLATE_PARAMETERS___
       {
         "type": "CHECKBOX",
         "name": "useOptimisticScenario",
-        "checkboxText": "Do not wait for Meta's response",
+        "checkboxText": "Do not wait for Meta\u0027s response",
         "simpleValueType": true,
         "help": "Reports success as soon as the request is sent. It shortens the response time of the container, at the cost of never seeing a failed request in the tag status."
       },
@@ -2306,34 +2306,6 @@ ___SERVER_PERMISSIONS___
           }
         },
         {
-          "key": "headerAccess",
-          "value": {
-            "type": 1,
-            "string": "specific"
-          }
-        },
-        {
-          "key": "queryParametersAllowed",
-          "value": {
-            "type": 8,
-            "boolean": false
-          }
-        },
-        {
-          "key": "queryParameterAccess",
-          "value": {
-            "type": 1,
-            "string": "specific"
-          }
-        },
-        {
-          "key": "queryParameterWhitelist",
-          "value": {
-            "type": 2,
-            "listItem": []
-          }
-        },
-        {
           "key": "requestAccess",
           "value": {
             "type": 1,
@@ -2341,17 +2313,17 @@ ___SERVER_PERMISSIONS___
           }
         },
         {
-          "key": "pathAllowed",
+          "key": "headerAccess",
           "value": {
-            "type": 8,
-            "boolean": false
+            "type": 1,
+            "string": "specific"
           }
         },
         {
-          "key": "remoteAddressAllowed",
+          "key": "queryParameterAccess",
           "value": {
-            "type": 8,
-            "boolean": false
+            "type": 1,
+            "string": "any"
           }
         }
       ]
@@ -2379,6 +2351,16 @@ ___SERVER_PERMISSIONS___
     },
     "clientAnnotations": {
       "isEditedByUser": true
+    },
+    "isRequired": true
+  },
+  {
+    "instance": {
+      "key": {
+        "publicId": "read_container_data",
+        "versionId": "1"
+      },
+      "param": []
     },
     "isRequired": true
   }
@@ -2831,3 +2813,5 @@ container. It never contacts any host other than graph.facebook.com.
 
 Personal data is normalised and hashed with SHA-256 inside the container before it
 leaves the server; values that already arrive hashed are passed through untouched.
+
+
